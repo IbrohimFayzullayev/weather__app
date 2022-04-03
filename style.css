@@ -68,7 +68,6 @@ html {
 }
 .weather__type {
   font-size: 2.2rem;
-  margin-bottom: -3rem;
 }
 .city__form {
   width: 80%;
@@ -101,4 +100,31 @@ html {
   display: flex;
   justify-content: space-between;
   font-size: 1.6rem;
+}
+.weather__img {
+  width: 5rem;
+  height: 5rem;
+}
+.temp {
+  position: relative;
+}
+.circle {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 0.6rem solid #fff;
+  right: -2rem;
+  top: -0.5rem;
+}
+.search__btn {
+  position: absolute;
+  right: 0;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 255, 0.63);
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
 }

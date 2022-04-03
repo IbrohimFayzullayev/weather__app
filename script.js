@@ -30,13 +30,6 @@ let weather = function (country) {
       imgWeather.src = `${rest.current.condition.icon}`;
     });
 };
-fetch("http://ip-api.com/json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (payload) {
-    weather(`${payload.country}`);
-  });
 
 userInput.addEventListener("keypress", function (e) {
   if (e.keyCode === 13) {
@@ -50,3 +43,13 @@ searchBtn.addEventListener("click", function (e) {
   weather(`${userInput.value}`);
   userInput.value = "";
 });
+
+fetch(
+  "https://ipgeolocation.abstractapi.com/v1/?api_key=b1ffca59e00c49ee8866b49896904314"
+)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (payload) {
+    weather(`${payload.city}`);
+  });

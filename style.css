@@ -79,10 +79,12 @@ html {
   padding: 0.8rem 1.2rem;
   font-size: 1.6rem;
   outline: none;
-  border-bottom: 0.1rem solid #fff;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.535);
   width: 100%;
 }
-.user__input::placeholder,
+.user__input::placeholder {
+  color: rgba(255, 255, 255, 0.581);
+}
 .user__input:focus {
   color: #fff;
 }
@@ -117,14 +119,25 @@ html {
   right: -2rem;
   top: -0.5rem;
 }
+.input_box {
+  position: relative;
+}
 .search__btn {
   position: absolute;
   right: 0;
-  border: none;
-  border-radius: 0.3rem;
+  top: 0;
+  /* border-radius: 50%; */
   background-color: rgba(0, 0, 255, 0.63);
   color: #fff;
-  font-size: 1.6rem;
   cursor: pointer;
-  padding: 0.4rem 0.8rem;
+  width: 5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.search_icon {
+  transform: rotate(180deg);
+  font-size: 3.2rem;
 }
